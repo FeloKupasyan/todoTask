@@ -1,4 +1,6 @@
 
+<!--
+  1) do not dublicate the model. only use a single input and set checked depending on done. -->
 <input type="checkbox" value="todo.done" *ngIf="todo.done" checked>
 <input type="checkbox" value="todo.done" *ngIf="!todo.done">
 <p>{{todo.id}} __ {{todo.text}} </p>
@@ -7,5 +9,6 @@
 </span>
 
 <button class="btn btn-danger" (click)="remove()">Remove</button>
-<button class="btn btn-primary" (click)="edit()">Change Status</button>
+
+<button class="btn btn-primary" (click)="edit()">Submit</button>
 

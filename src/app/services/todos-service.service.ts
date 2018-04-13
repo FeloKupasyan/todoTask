@@ -38,6 +38,7 @@ export class CustomInterceptor implements HttpInterceptor {
       req = req.clone({ headers: req.headers.set('Content-Type', 'application/json') });
     }
 
+    // why cloning the again, please set all headers to the request in one step via object
     req = req.clone({ headers: req.headers.set('Accept', 'application/json') });
     return next.handle(req);
   }
