@@ -1,0 +1,4 @@
+<div *ngFor="let todo of todoListArray">
+  <app-todolist-items [todo]="todo" (removeTodo)="removeTodo($event)" (editTodo)="editTodo($event)"></app-todolist-items>
+</div>
+<app-todolist-form (addTodo)="addTodo($event)" ></app-todolist-form>
